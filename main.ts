@@ -19,8 +19,10 @@ const filterWarehouseStocks =
   (stock: T): boolean => {
     return warehouseName === stock.warehouseName;
   };
-
-const WAREHOUSES_STOCKS_URL = BASE_WILDBERRIES_URL + "api/v1/supplier/stocks";
+const WAREHOUSES_STOCKS_URL =
+  BASE_WILDBERRIES_URL +
+  "api/v1/supplier/stocks" +
+  `?dateFrom=${new Date().toISOString()}`;
 const KAZAN_WB = "Казань WB";
 
 (async () => {
