@@ -4,7 +4,8 @@ import "dotenv/config";
 type StockType = { warehouseName: string };
 
 const SELLER_API = process.env.SELLER_API || "";
-const BASE_WILDBERRIES_URL = process.env.WILDBERRIES_URL || 'https://statistics-api.wildberries.ru';
+const BASE_WILDBERRIES_URL =
+  process.env.WILDBERRIES_URL || "https://statistics-api.wildberries.ru/";
 
 const fetch = async (url: string, api: string) => {
   try {
